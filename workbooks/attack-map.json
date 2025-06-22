@@ -1,0 +1,468 @@
+{
+  "version": "Notebook/1.0",
+  "items": [
+    {
+      "type": 1,
+      "content": {
+        "json": "## 🛡️ Cybersecurity Home Lab - Attack Map Dashboard\n\nThis dashboard visualizes real-time cyber attacks captured by your honeypot virtual machine.\n\n**⚠️ Security Notice**: This lab intentionally creates an open attack surface for educational purposes. Never deploy this configuration in production environments."
+      },
+      "name": "header"
+    },
+    {
+      "type": 3,
+      "content": {
+        "version": "KqlItem/1.0",
+        "query": "let geo = _GetWatchlist('geoip');\nSecurityEvent\n| where EventID == 4625 and TimeGenerated > ago(24h)\n| lookup geo on $left.IpAddress == $right.Network\n| summarize count() by Latitude, Longitude, CountryName, CityName, IpAddress\n| where isnotempty(Latitude) and isnotempty(Longitude)\n| order by count_ desc",
+        "size": 0,
+        "showAnalytics": true,
+        "title": "🌍 Real-Time Attack Map",
+        "noDataMessage": "No attacks detected in the last 24 hours. This is normal for a new honeypot setup.",
+        "noDataMessageDisplay": "custom",
+        "tileSettings": {
+          "showBorder": false,
+          "titleContent": {
+            "columnMatch": "count_",
+            "formatter": 1
+          },
+          "leftContent": {
+            "columnMatch": "CityName",
+            "formatter": 12,
+            "formatOptions": {
+              "palette": "auto"
+            },
+            "numberFormat": {
+              "unit": 17,
+              "options": {
+                "style": "decimal",
+                "maximumFractionDigits": 2
+              }
+            }
+          },
+          "rightContent": {
+            "columnMatch": "CountryName",
+            "formatter": 12,
+            "formatOptions": {
+              "palette": "auto"
+            },
+            "numberFormat": {
+              "unit": 17,
+              "options": {
+                "style": "decimal",
+                "maximumFractionDigits": 2
+              }
+            }
+          }
+        },
+        "graphSettings": {
+          "type": 0,
+          "topContent": {
+            "columnMatch": "count_",
+            "formatter": 1,
+            "numberFormat": {
+              "unit": 17,
+              "options": {
+                "style": "decimal",
+                "maximumFractionDigits": 2
+              }
+            }
+          }
+        }
+      },
+      "customWidth": "50%",
+      "name": "attack-map"
+    },
+    {
+      "type": 3,
+      "content": {
+        "version": "KqlItem/1.0",
+        "query": "let geo = _GetWatchlist('geoip');\nSecurityEvent\n| where EventID == 4625 and TimeGenerated > ago(7d)\n| lookup geo on $left.IpAddress == $right.Network\n| summarize count() by CountryName\n| order by count_ desc\n| take 10",
+        "size": 0,
+        "showAnalytics": true,
+        "title": "🏆 Top Attacking Countries (Last 7 Days)",
+        "noDataMessage": "No geographic data available. Ensure geoip watchlist is configured.",
+        "noDataMessageDisplay": "custom",
+        "tileSettings": {
+          "showBorder": false,
+          "titleContent": {
+            "columnMatch": "count_",
+            "formatter": 1
+          },
+          "leftContent": {
+            "columnMatch": "CountryName",
+            "formatter": 12,
+            "formatOptions": {
+              "palette": "auto"
+            },
+            "numberFormat": {
+              "unit": 17,
+              "options": {
+                "style": "decimal",
+                "maximumFractionDigits": 2
+              }
+            }
+          },
+          "rightContent": {
+            "columnMatch": "count_",
+            "formatter": 12,
+            "formatOptions": {
+              "palette": "auto"
+            },
+            "numberFormat": {
+              "unit": 17,
+              "options": {
+                "style": "decimal",
+                "maximumFractionDigits": 2
+              }
+            }
+          }
+        },
+        "graphSettings": {
+          "type": 0,
+          "topContent": {
+            "columnMatch": "count_",
+            "formatter": 1,
+            "numberFormat": {
+              "unit": 17,
+              "options": {
+                "style": "decimal",
+                "maximumFractionDigits": 2
+              }
+            }
+          }
+        }
+      },
+      "customWidth": "50%",
+      "name": "top-countries"
+    },
+    {
+      "type": 3,
+      "content": {
+        "version": "KqlItem/1.0",
+        "query": "SecurityEvent\n| where EventID == 4625 and TimeGenerated > ago(24h)\n| summarize count() by bin(TimeGenerated, 1h)\n| order by TimeGenerated asc",
+        "size": 0,
+        "showAnalytics": true,
+        "title": "📈 Attack Timeline (Last 24 Hours)",
+        "noDataMessage": "No attacks detected in the last 24 hours.",
+        "noDataMessageDisplay": "custom",
+        "tileSettings": {
+          "showBorder": false,
+          "titleContent": {
+            "columnMatch": "count_",
+            "formatter": 1
+          },
+          "leftContent": {
+            "columnMatch": "TimeGenerated",
+            "formatter": 12,
+            "formatOptions": {
+              "palette": "auto"
+            },
+            "numberFormat": {
+              "unit": 17,
+              "options": {
+                "style": "decimal",
+                "maximumFractionDigits": 2
+              }
+            }
+          },
+          "rightContent": {
+            "columnMatch": "count_",
+            "formatter": 12,
+            "formatOptions": {
+              "palette": "auto"
+            },
+            "numberFormat": {
+              "unit": 17,
+              "options": {
+                "style": "decimal",
+                "maximumFractionDigits": 2
+              }
+            }
+          }
+        },
+        "graphSettings": {
+          "type": 0,
+          "topContent": {
+            "columnMatch": "count_",
+            "formatter": 1,
+            "numberFormat": {
+              "unit": 17,
+              "options": {
+                "style": "decimal",
+                "maximumFractionDigits": 2
+              }
+            }
+          }
+        }
+      },
+      "customWidth": "50%",
+      "name": "attack-timeline"
+    },
+    {
+      "type": 3,
+      "content": {
+        "version": "KqlItem/1.0",
+        "query": "SecurityEvent\n| where EventID == 4625 and TimeGenerated > ago(24h)\n| summarize count() by IpAddress\n| order by count_ desc\n| take 10",
+        "size": 0,
+        "showAnalytics": true,
+        "title": "🎯 Top Attacking IP Addresses",
+        "noDataMessage": "No attacks detected in the last 24 hours.",
+        "noDataMessageDisplay": "custom",
+        "tileSettings": {
+          "showBorder": false,
+          "titleContent": {
+            "columnMatch": "count_",
+            "formatter": 1
+          },
+          "leftContent": {
+            "columnMatch": "IpAddress",
+            "formatter": 12,
+            "formatOptions": {
+              "palette": "auto"
+            },
+            "numberFormat": {
+              "unit": 17,
+              "options": {
+                "style": "decimal",
+                "maximumFractionDigits": 2
+              }
+            }
+          },
+          "rightContent": {
+            "columnMatch": "count_",
+            "formatter": 12,
+            "formatOptions": {
+              "palette": "auto"
+            },
+            "numberFormat": {
+              "unit": 17,
+              "options": {
+                "style": "decimal",
+                "maximumFractionDigits": 2
+              }
+            }
+          }
+        },
+        "graphSettings": {
+          "type": 0,
+          "topContent": {
+            "columnMatch": "count_",
+            "formatter": 1,
+            "numberFormat": {
+              "unit": 17,
+              "options": {
+                "style": "decimal",
+                "maximumFractionDigits": 2
+              }
+            }
+          }
+        }
+      },
+      "customWidth": "50%",
+      "name": "top-ips"
+    },
+    {
+      "type": 3,
+      "content": {
+        "version": "KqlItem/1.0",
+        "query": "SecurityEvent\n| where EventID == 4625 and TimeGenerated > ago(24h)\n| summarize count() by Account\n| order by count_ desc\n| take 10",
+        "size": 0,
+        "showAnalytics": true,
+        "title": "👤 Most Targeted Accounts",
+        "noDataMessage": "No attacks detected in the last 24 hours.",
+        "noDataMessageDisplay": "custom",
+        "tileSettings": {
+          "showBorder": false,
+          "titleContent": {
+            "columnMatch": "count_",
+            "formatter": 1
+          },
+          "leftContent": {
+            "columnMatch": "Account",
+            "formatter": 12,
+            "formatOptions": {
+              "palette": "auto"
+            },
+            "numberFormat": {
+              "unit": 17,
+              "options": {
+                "style": "decimal",
+                "maximumFractionDigits": 2
+              }
+            }
+          },
+          "rightContent": {
+            "columnMatch": "count_",
+            "formatter": 12,
+            "formatOptions": {
+              "palette": "auto"
+            },
+            "numberFormat": {
+              "unit": 17,
+              "options": {
+                "style": "decimal",
+                "maximumFractionDigits": 2
+              }
+            }
+          }
+        },
+        "graphSettings": {
+          "type": 0,
+          "topContent": {
+            "columnMatch": "count_",
+            "formatter": 1,
+            "numberFormat": {
+              "unit": 17,
+              "options": {
+                "style": "decimal",
+                "maximumFractionDigits": 2
+              }
+            }
+          }
+        }
+      },
+      "customWidth": "50%",
+      "name": "targeted-accounts"
+    },
+    {
+      "type": 3,
+      "content": {
+        "version": "KqlItem/1.0",
+        "query": "let highRiskCountries = datatable(Country:string) [\n    \"Russia\",\n    \"China\", \n    \"North Korea\",\n    \"Iran\",\n    \"Syria\"\n];\nlet geo = _GetWatchlist('geoip');\nSecurityEvent\n| where EventID == 4625 and TimeGenerated > ago(24h)\n| lookup geo on $left.IpAddress == $right.Network\n| where CountryName in (highRiskCountries)\n| summarize count() by CountryName, IpAddress\n| order by count_ desc",
+        "size": 0,
+        "showAnalytics": true,
+        "title": "🚨 High-Risk Country Attacks",
+        "noDataMessage": "No attacks from high-risk countries detected.",
+        "noDataMessageDisplay": "custom",
+        "tileSettings": {
+          "showBorder": false,
+          "titleContent": {
+            "columnMatch": "count_",
+            "formatter": 1
+          },
+          "leftContent": {
+            "columnMatch": "CountryName",
+            "formatter": 12,
+            "formatOptions": {
+              "palette": "auto"
+            },
+            "numberFormat": {
+              "unit": 17,
+              "options": {
+                "style": "decimal",
+                "maximumFractionDigits": 2
+              }
+            }
+          },
+          "rightContent": {
+            "columnMatch": "count_",
+            "formatter": 12,
+            "formatOptions": {
+              "palette": "auto"
+            },
+            "numberFormat": {
+              "unit": 17,
+              "options": {
+                "style": "decimal",
+                "maximumFractionDigits": 2
+              }
+            }
+          }
+        },
+        "graphSettings": {
+          "type": 0,
+          "topContent": {
+            "columnMatch": "count_",
+            "formatter": 1,
+            "numberFormat": {
+              "unit": 17,
+              "options": {
+                "style": "decimal",
+                "maximumFractionDigits": 2
+              }
+            }
+          }
+        }
+      },
+      "customWidth": "50%",
+      "name": "high-risk-countries"
+    },
+    {
+      "type": 3,
+      "content": {
+        "version": "KqlItem/1.0",
+        "query": "SecurityEvent\n| where EventID == 4625 and TimeGenerated > ago(24h)\n| summarize count() by IpAddress, bin(TimeGenerated, 5m)\n| where count_ > 5\n| order by count_ desc\n| take 10",
+        "size": 0,
+        "showAnalytics": true,
+        "title": "⚡ Brute Force Attacks (5+ attempts in 5 min)",
+        "noDataMessage": "No brute force attacks detected in the last 24 hours.",
+        "noDataMessageDisplay": "custom",
+        "tileSettings": {
+          "showBorder": false,
+          "titleContent": {
+            "columnMatch": "count_",
+            "formatter": 1
+          },
+          "leftContent": {
+            "columnMatch": "IpAddress",
+            "formatter": 12,
+            "formatOptions": {
+              "palette": "auto"
+            },
+            "numberFormat": {
+              "unit": 17,
+              "options": {
+                "style": "decimal",
+                "maximumFractionDigits": 2
+              }
+            }
+          },
+          "rightContent": {
+            "columnMatch": "count_",
+            "formatter": 12,
+            "formatOptions": {
+              "palette": "auto"
+            },
+            "numberFormat": {
+              "unit": 17,
+              "options": {
+                "style": "decimal",
+                "maximumFractionDigits": 2
+              }
+            }
+          }
+        },
+        "graphSettings": {
+          "type": 0,
+          "topContent": {
+            "columnMatch": "count_",
+            "formatter": 1,
+            "numberFormat": {
+              "unit": 17,
+              "options": {
+                "style": "decimal",
+                "maximumFractionDigits": 2
+              }
+            }
+          }
+        }
+      },
+      "customWidth": "50%",
+      "name": "brute-force-attacks"
+    },
+    {
+      "type": 1,
+      "content": {
+        "json": "## 📊 Dashboard Statistics\n\nThis dashboard shows real-time cyber attack data from your honeypot. The data refreshes automatically every 5 minutes.\n\n### Key Metrics:\n- **Attack Map**: Geographic visualization of attack origins\n- **Top Countries**: Most active attacking nations\n- **Timeline**: Hourly attack patterns\n- **IP Analysis**: Most aggressive source IPs\n- **Account Targeting**: Most attempted usernames\n- **High-Risk Countries**: Attacks from sanctioned nations\n- **Brute Force**: Rapid-fire attack attempts\n\n### Expected Results:\n- Within 24-48 hours, you should see attacks from various countries\n- Common attacking countries include Russia, China, and Eastern European nations\n- Typical targeted accounts: admin, administrator, root, test\n- Attack patterns often show bursts of activity followed by quiet periods"
+      },
+      "name": "dashboard-info"
+    }
+  ],
+  "styleSettings": {
+    "default": {
+      "margin": "0px"
+    }
+  },
+  "fromTemplateId": null,
+  "fromTemplateResourceId": null,
+  "version": "Notebook/1.0"
+} 

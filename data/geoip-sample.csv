@@ -1,0 +1,256 @@
+Network,CountryName,CountryCode,CityName,Latitude,Longitude,ISP,Organization
+1.0.0.0/8,Australia,AU,Sydney,-33.8688,151.2093,Telstra,Telecommunications
+2.0.0.0/8,France,FR,Paris,48.8566,2.3522,Orange,Telecommunications
+3.0.0.0/8,United States,US,New York,40.7128,-74.0060,Verizon,Telecommunications
+4.0.0.0/8,United States,US,Los Angeles,34.0522,-118.2437,AT&T,Telecommunications
+5.0.0.0/8,United Kingdom,GB,London,51.5074,-0.1278,BT,Telecommunications
+6.0.0.0/8,United States,US,Chicago,41.8781,-87.6298,Comcast,Telecommunications
+7.0.0.0/8,United States,US,Houston,29.7604,-95.3698,AT&T,Telecommunications
+8.0.0.0/8,United States,US,Phoenix,33.4484,-112.0740,Cox Communications,Telecommunications
+9.0.0.0/8,United States,US,Philadelphia,39.9526,-75.1652,Comcast,Telecommunications
+10.0.0.0/8,United States,US,San Antonio,29.4241,-98.4936,AT&T,Telecommunications
+11.0.0.0/8,United States,US,San Diego,32.7157,-117.1611,Cox Communications,Telecommunications
+12.0.0.0/8,United States,US,Dallas,32.7767,-96.7970,AT&T,Telecommunications
+13.0.0.0/8,United States,US,San Jose,37.3382,-121.8863,Comcast,Telecommunications
+14.0.0.0/8,United States,US,Austin,30.2672,-97.7431,AT&T,Telecommunications
+15.0.0.0/8,United States,US,Jacksonville,30.3322,-81.6557,Comcast,Telecommunications
+16.0.0.0/8,United States,US,Fort Worth,32.7555,-97.3308,AT&T,Telecommunications
+17.0.0.0/8,United States,US,Columbus,39.9612,-82.9988,AT&T,Telecommunications
+18.0.0.0/8,United States,US,Charlotte,35.2271,-80.8431,AT&T,Telecommunications
+19.0.0.0/8,United States,US,San Francisco,37.7749,-122.4194,Comcast,Telecommunications
+20.0.0.0/8,United States,US,Indianapolis,39.7684,-86.1581,AT&T,Telecommunications
+21.0.0.0/8,United States,US,Seattle,47.6062,-122.3321,Comcast,Telecommunications
+22.0.0.0/8,United States,US,Denver,39.7392,-104.9903,Comcast,Telecommunications
+23.0.0.0/8,United States,US,Washington,38.9072,-77.0369,Comcast,Telecommunications
+24.0.0.0/8,United States,US,Boston,42.3601,-71.0589,Comcast,Telecommunications
+25.0.0.0/8,United States,US,El Paso,31.7619,-106.4850,AT&T,Telecommunications
+26.0.0.0/8,United States,US,Nashville,36.1627,-86.7816,AT&T,Telecommunications
+27.0.0.0/8,United States,US,Detroit,42.3314,-83.0458,AT&T,Telecommunications
+28.0.0.0/8,United States,US,Oklahoma City,35.4676,-97.5164,AT&T,Telecommunications
+29.0.0.0/8,United States,US,Portland,45.5152,-122.6784,Comcast,Telecommunications
+30.0.0.0/8,United States,US,Las Vegas,36.1699,-115.1398,Cox Communications,Telecommunications
+31.0.0.0/8,United States,US,Memphis,35.1495,-90.0490,AT&T,Telecommunications
+32.0.0.0/8,United States,US,Louisville,38.2527,-85.7585,AT&T,Telecommunications
+33.0.0.0/8,United States,US,Baltimore,39.2904,-76.6122,Comcast,Telecommunications
+34.0.0.0/8,United States,US,Milwaukee,43.0389,-87.9065,AT&T,Telecommunications
+35.0.0.0/8,United States,US,Albuquerque,35.0844,-106.6504,Comcast,Telecommunications
+36.0.0.0/8,United States,US,Tucson,32.2226,-110.9747,Cox Communications,Telecommunications
+37.0.0.0/8,United States,US,Fresno,36.7378,-119.7871,AT&T,Telecommunications
+38.0.0.0/8,United States,US,Sacramento,38.5816,-121.4944,Comcast,Telecommunications
+39.0.0.0/8,United States,US,Atlanta,33.7490,-84.3880,Comcast,Telecommunications
+40.0.0.0/8,United States,US,Kansas City,39.0997,-94.5786,AT&T,Telecommunications
+41.0.0.0/8,United States,US,Long Beach,33.7701,-118.1937,Comcast,Telecommunications
+42.0.0.0/8,United States,US,Mesa,33.4152,-111.8315,Cox Communications,Telecommunications
+43.0.0.0/8,United States,US,Colorado Springs,38.8339,-104.8214,Comcast,Telecommunications
+44.0.0.0/8,United States,US,Virginia Beach,36.8529,-75.9780,Comcast,Telecommunications
+45.0.0.0/8,United States,US,Raleigh,35.7796,-78.6382,AT&T,Telecommunications
+46.0.0.0/8,United States,US,Omaha,41.2565,-95.9345,AT&T,Telecommunications
+47.0.0.0/8,United States,US,Miami,25.7617,-80.1918,Comcast,Telecommunications
+48.0.0.0/8,United States,US,Oakland,37.8044,-122.2711,Comcast,Telecommunications
+49.0.0.0/8,United States,US,Minneapolis,44.9778,-93.2650,Comcast,Telecommunications
+50.0.0.0/8,United States,US,Tulsa,36.1540,-95.9928,AT&T,Telecommunications
+51.0.0.0/8,United Kingdom,GB,Manchester,53.4808,-2.2426,BT,Telecommunications
+52.0.0.0/8,United Kingdom,GB,Birmingham,52.4862,-1.8904,BT,Telecommunications
+53.0.0.0/8,United Kingdom,GB,Leeds,53.8008,-1.5491,BT,Telecommunications
+54.0.0.0/8,United Kingdom,GB,Liverpool,53.4084,-2.9916,BT,Telecommunications
+55.0.0.0/8,United Kingdom,GB,Sheffield,53.3811,-1.4701,BT,Telecommunications
+56.0.0.0/8,United Kingdom,GB,Edinburgh,55.9533,-3.1883,BT,Telecommunications
+57.0.0.0/8,United Kingdom,GB,Bristol,51.4545,-2.5879,BT,Telecommunications
+58.0.0.0/8,United Kingdom,GB,Glasgow,55.8642,-4.2518,BT,Telecommunications
+59.0.0.0/8,United Kingdom,GB,Leicester,52.6369,-1.1398,BT,Telecommunications
+60.0.0.0/8,United Kingdom,GB,Bradford,53.8008,-1.5491,BT,Telecommunications
+61.0.0.0/8,United Kingdom,GB,Coventry,52.4068,-1.5197,BT,Telecommunications
+62.0.0.0/8,United Kingdom,GB,Nottingham,52.9548,-1.1581,BT,Telecommunications
+63.0.0.0/8,United Kingdom,GB,Kingston upon Hull,53.7443,-0.3325,BT,Telecommunications
+64.0.0.0/8,United Kingdom,GB,Newcastle upon Tyne,54.9783,-1.6178,BT,Telecommunications
+65.0.0.0/8,United Kingdom,GB,Stoke-on-Trent,53.0027,-2.1794,BT,Telecommunications
+66.0.0.0/8,United Kingdom,GB,Southampton,50.9097,-1.4044,BT,Telecommunications
+67.0.0.0/8,United Kingdom,GB,Derby,52.9225,-1.4746,BT,Telecommunications
+68.0.0.0/8,United Kingdom,GB,Plymouth,50.3755,-4.1427,BT,Telecommunications
+69.0.0.0/8,United Kingdom,GB,Wolverhampton,52.5862,-2.1289,BT,Telecommunications
+70.0.0.0/8,United Kingdom,GB,Cardiff,51.4816,-3.1791,BT,Telecommunications
+71.0.0.0/8,United Kingdom,GB,Swansea,51.6214,-3.9436,BT,Telecommunications
+72.0.0.0/8,United Kingdom,GB,Belfast,54.5973,-5.9301,BT,Telecommunications
+73.0.0.0/8,United Kingdom,GB,Aberdeen,57.1497,-2.0943,BT,Telecommunications
+74.0.0.0/8,United Kingdom,GB,Dundee,56.4620,-2.9707,BT,Telecommunications
+75.0.0.0/8,United Kingdom,GB,Portsmouth,50.8198,-1.1139,BT,Telecommunications
+76.0.0.0/8,United Kingdom,GB,York,53.9600,-1.0873,BT,Telecommunications
+77.0.0.0/8,United Kingdom,GB,Oxford,51.7520,-1.2577,BT,Telecommunications
+78.0.0.0/8,United Kingdom,GB,Cambridge,52.2053,0.1218,BT,Telecommunications
+79.0.0.0/8,United Kingdom,GB,Bath,51.3758,-2.3599,BT,Telecommunications
+80.0.0.0/8,United Kingdom,GB,Canterbury,51.2802,1.0789,BT,Telecommunications
+81.0.0.0/8,United Kingdom,GB,Chester,53.1934,-2.8931,BT,Telecommunications
+82.0.0.0/8,United Kingdom,GB,Durham,54.7761,-1.5733,BT,Telecommunications
+83.0.0.0/8,United Kingdom,GB,Exeter,50.7184,-3.5339,BT,Telecommunications
+84.0.0.0/8,United Kingdom,GB,Gloucester,51.8642,-2.2380,BT,Telecommunications
+85.0.0.0/8,United Kingdom,GB,Hereford,52.0567,-2.7160,BT,Telecommunications
+86.0.0.0/8,United Kingdom,GB,Lancaster,54.0473,-2.8007,BT,Telecommunications
+87.0.0.0/8,United Kingdom,GB,Lincoln,53.2307,-0.5406,BT,Telecommunications
+88.0.0.0/8,United Kingdom,GB,Newcastle,54.9783,-1.6178,BT,Telecommunications
+89.0.0.0/8,United Kingdom,GB,Norwich,52.6309,1.2974,BT,Telecommunications
+90.0.0.0/8,United Kingdom,GB,Peterborough,52.5695,-0.2405,BT,Telecommunications
+91.0.0.0/8,United Kingdom,GB,Preston,53.7632,-2.7031,BT,Telecommunications
+92.0.0.0/8,United Kingdom,GB,Ripon,54.1382,-1.5219,BT,Telecommunications
+93.0.0.0/8,United Kingdom,GB,Salisbury,51.0688,-1.7945,BT,Telecommunications
+94.0.0.0/8,United Kingdom,GB,St Albans,51.7557,-0.3360,BT,Telecommunications
+95.0.0.0/8,United Kingdom,GB,St Davids,51.8819,-5.2659,BT,Telecommunications
+96.0.0.0/8,United Kingdom,GB,Stirling,56.1165,-3.9369,BT,Telecommunications
+97.0.0.0/8,United Kingdom,GB,Truro,50.2632,-5.0510,BT,Telecommunications
+98.0.0.0/8,United Kingdom,GB,Wells,51.2093,-2.6476,BT,Telecommunications
+99.0.0.0/8,United Kingdom,GB,Winchester,51.0598,-1.3100,BT,Telecommunications
+100.0.0.0/8,United Kingdom,GB,Worcester,52.1920,-2.2200,BT,Telecommunications
+101.0.0.0/8,United Kingdom,GB,York,53.9600,-1.0873,BT,Telecommunications
+102.0.0.0/8,United Kingdom,GB,Aberdeen,57.1497,-2.0943,BT,Telecommunications
+103.0.0.0/8,United Kingdom,GB,Dundee,56.4620,-2.9707,BT,Telecommunications
+104.0.0.0/8,United Kingdom,GB,Edinburgh,55.9533,-3.1883,BT,Telecommunications
+105.0.0.0/8,United Kingdom,GB,Glasgow,55.8642,-4.2518,BT,Telecommunications
+106.0.0.0/8,United Kingdom,GB,Inverness,57.4778,-4.2247,BT,Telecommunications
+107.0.0.0/8,United Kingdom,GB,Perth,56.3950,-3.4308,BT,Telecommunications
+108.0.0.0/8,United Kingdom,GB,Stirling,56.1165,-3.9369,BT,Telecommunications
+109.0.0.0/8,United Kingdom,GB,Aberystwyth,52.4153,-4.0829,BT,Telecommunications
+110.0.0.0/8,United Kingdom,GB,Bangor,53.2274,-4.1293,BT,Telecommunications
+111.0.0.0/8,United Kingdom,GB,Cardiff,51.4816,-3.1791,BT,Telecommunications
+112.0.0.0/8,United Kingdom,GB,Newport,51.5842,-2.9977,BT,Telecommunications
+113.0.0.0/8,United Kingdom,GB,St Davids,51.8819,-5.2659,BT,Telecommunications
+114.0.0.0/8,United Kingdom,GB,Swansea,51.6214,-3.9436,BT,Telecommunications
+115.0.0.0/8,United Kingdom,GB,Wrexham,53.0430,-2.9925,BT,Telecommunications
+116.0.0.0/8,United Kingdom,GB,Armagh,54.3503,-6.6528,BT,Telecommunications
+117.0.0.0/8,United Kingdom,GB,Bangor,54.6598,-5.6698,BT,Telecommunications
+118.0.0.0/8,United Kingdom,GB,Belfast,54.5973,-5.9301,BT,Telecommunications
+119.0.0.0/8,United Kingdom,GB,Lisburn,54.5162,-6.0581,BT,Telecommunications
+120.0.0.0/8,United Kingdom,GB,Newry,54.1759,-6.3374,BT,Telecommunications
+121.0.0.0/8,United Kingdom,GB,Newtownabbey,54.6598,-5.9086,BT,Telecommunications
+122.0.0.0/8,United Kingdom,GB,Portadown,54.4231,-6.4493,BT,Telecommunications
+123.0.0.0/8,United Kingdom,GB,Antrim,54.7183,-6.2074,BT,Telecommunications
+124.0.0.0/8,United Kingdom,GB,Ballymena,54.8647,-6.2781,BT,Telecommunications
+125.0.0.0/8,United Kingdom,GB,Ballymoney,55.0708,-6.5101,BT,Telecommunications
+126.0.0.0/8,United Kingdom,GB,Carrickfergus,54.7136,-5.8074,BT,Telecommunications
+127.0.0.0/8,United Kingdom,GB,Coleraine,55.1333,-6.6667,BT,Telecommunications
+128.0.0.0/8,United Kingdom,GB,Cookstown,54.6472,-6.7453,BT,Telecommunications
+129.0.0.0/8,United Kingdom,GB,Craigavon,54.4472,-6.3881,BT,Telecommunications
+130.0.0.0/8,United Kingdom,GB,Derry,54.9966,-7.3086,BT,Telecommunications
+131.0.0.0/8,United Kingdom,GB,Dungannon,54.5033,-6.7667,BT,Telecommunications
+132.0.0.0/8,United Kingdom,GB,Enniskillen,54.3464,-7.6311,BT,Telecommunications
+133.0.0.0/8,United Kingdom,GB,Larne,54.8500,-5.8167,BT,Telecommunications
+134.0.0.0/8,United Kingdom,GB,Limavady,55.0500,-6.9500,BT,Telecommunications
+135.0.0.0/8,United Kingdom,GB,Lisburn,54.5162,-6.0581,BT,Telecommunications
+136.0.0.0/8,United Kingdom,GB,Londonderry,54.9966,-7.3086,BT,Telecommunications
+137.0.0.0/8,United Kingdom,GB,Magherafelt,54.7544,-6.6064,BT,Telecommunications
+138.0.0.0/8,United Kingdom,GB,Newcastle,54.2167,-5.8833,BT,Telecommunications
+139.0.0.0/8,United Kingdom,GB,Newry,54.1759,-6.3374,BT,Telecommunications
+140.0.0.0/8,United Kingdom,GB,Newtownabbey,54.6598,-5.9086,BT,Telecommunications
+141.0.0.0/8,United Kingdom,GB,North Down,54.6598,-5.6698,BT,Telecommunications
+142.0.0.0/8,United Kingdom,GB,Omagh,54.5977,-7.3100,BT,Telecommunications
+143.0.0.0/8,United Kingdom,GB,Strabane,54.8274,-7.4728,BT,Telecommunications
+144.0.0.0/8,United Kingdom,GB,Antrim,54.7183,-6.2074,BT,Telecommunications
+145.0.0.0/8,United Kingdom,GB,Ards,54.6598,-5.6698,BT,Telecommunications
+146.0.0.0/8,United Kingdom,GB,Armagh,54.3503,-6.6528,BT,Telecommunications
+147.0.0.0/8,United Kingdom,GB,Ballymena,54.8647,-6.2781,BT,Telecommunications
+148.0.0.0/8,United Kingdom,GB,Ballymoney,55.0708,-6.5101,BT,Telecommunications
+149.0.0.0/8,United Kingdom,GB,Banbridge,54.3503,-6.6528,BT,Telecommunications
+150.0.0.0/8,United Kingdom,GB,Belfast,54.5973,-5.9301,BT,Telecommunications
+151.0.0.0/8,United Kingdom,GB,Carrickfergus,54.7136,-5.8074,BT,Telecommunications
+152.0.0.0/8,United Kingdom,GB,Coleraine,55.1333,-6.6667,BT,Telecommunications
+153.0.0.0/8,United Kingdom,GB,Cookstown,54.6472,-6.7453,BT,Telecommunications
+154.0.0.0/8,United Kingdom,GB,Craigavon,54.4472,-6.3881,BT,Telecommunications
+155.0.0.0/8,United Kingdom,GB,Derry,54.9966,-7.3086,BT,Telecommunications
+156.0.0.0/8,United Kingdom,GB,Down,54.6598,-5.6698,BT,Telecommunications
+157.0.0.0/8,United Kingdom,GB,Dungannon,54.5033,-6.7667,BT,Telecommunications
+158.0.0.0/8,United Kingdom,GB,Fermanagh,54.3464,-7.6311,BT,Telecommunications
+159.0.0.0/8,United Kingdom,GB,Larne,54.8500,-5.8167,BT,Telecommunications
+160.0.0.0/8,United Kingdom,GB,Limavady,55.0500,-6.9500,BT,Telecommunications
+161.0.0.0/8,United Kingdom,GB,Lisburn,54.5162,-6.0581,BT,Telecommunications
+162.0.0.0/8,United Kingdom,GB,Londonderry,54.9966,-7.3086,BT,Telecommunications
+163.0.0.0/8,United Kingdom,GB,Magherafelt,54.7544,-6.6064,BT,Telecommunications
+164.0.0.0/8,United Kingdom,GB,Moyle,55.1333,-6.6667,BT,Telecommunications
+165.0.0.0/8,United Kingdom,GB,Newry,54.1759,-6.3374,BT,Telecommunications
+166.0.0.0/8,United Kingdom,GB,Newtownabbey,54.6598,-5.9086,BT,Telecommunications
+167.0.0.0/8,United Kingdom,GB,North Down,54.6598,-5.6698,BT,Telecommunications
+168.0.0.0/8,United Kingdom,GB,Omagh,54.5977,-7.3100,BT,Telecommunications
+169.0.0.0/8,United Kingdom,GB,Strabane,54.8274,-7.4728,BT,Telecommunications
+170.0.0.0/8,United Kingdom,GB,Tyrone,54.5977,-7.3100,BT,Telecommunications
+171.0.0.0/8,United Kingdom,GB,Antrim,54.7183,-6.2074,BT,Telecommunications
+172.0.0.0/8,United Kingdom,GB,Armagh,54.3503,-6.6528,BT,Telecommunications
+173.0.0.0/8,United Kingdom,GB,Belfast,54.5973,-5.9301,BT,Telecommunications
+174.0.0.0/8,United Kingdom,GB,Derry,54.9966,-7.3086,BT,Telecommunications
+175.0.0.0/8,United Kingdom,GB,Down,54.6598,-5.6698,BT,Telecommunications
+176.0.0.0/8,United Kingdom,GB,Fermanagh,54.3464,-7.6311,BT,Telecommunications
+177.0.0.0/8,United Kingdom,GB,Londonderry,54.9966,-7.3086,BT,Telecommunications
+178.0.0.0/8,United Kingdom,GB,Tyrone,54.5977,-7.3100,BT,Telecommunications
+179.0.0.0/8,United Kingdom,GB,Aberdeen,57.1497,-2.0943,BT,Telecommunications
+180.0.0.0/8,United Kingdom,GB,Dundee,56.4620,-2.9707,BT,Telecommunications
+181.0.0.0/8,United Kingdom,GB,Edinburgh,55.9533,-3.1883,BT,Telecommunications
+182.0.0.0/8,United Kingdom,GB,Glasgow,55.8642,-4.2518,BT,Telecommunications
+183.0.0.0/8,United Kingdom,GB,Inverness,57.4778,-4.2247,BT,Telecommunications
+184.0.0.0/8,United Kingdom,GB,Perth,56.3950,-3.4308,BT,Telecommunications
+185.0.0.0/8,United Kingdom,GB,Stirling,56.1165,-3.9369,BT,Telecommunications
+186.0.0.0/8,United Kingdom,GB,Aberystwyth,52.4153,-4.0829,BT,Telecommunications
+187.0.0.0/8,United Kingdom,GB,Bangor,53.2274,-4.1293,BT,Telecommunications
+188.0.0.0/8,United Kingdom,GB,Cardiff,51.4816,-3.1791,BT,Telecommunications
+189.0.0.0/8,United Kingdom,GB,Newport,51.5842,-2.9977,BT,Telecommunications
+190.0.0.0/8,United Kingdom,GB,St Davids,51.8819,-5.2659,BT,Telecommunications
+191.0.0.0/8,United Kingdom,GB,Swansea,51.6214,-3.9436,BT,Telecommunications
+192.0.0.0/8,United Kingdom,GB,Wrexham,53.0430,-2.9925,BT,Telecommunications
+193.0.0.0/8,United Kingdom,GB,Armagh,54.3503,-6.6528,BT,Telecommunications
+194.0.0.0/8,United Kingdom,GB,Bangor,54.6598,-5.6698,BT,Telecommunications
+195.0.0.0/8,United Kingdom,GB,Belfast,54.5973,-5.9301,BT,Telecommunications
+196.0.0.0/8,United Kingdom,GB,Lisburn,54.5162,-6.0581,BT,Telecommunications
+197.0.0.0/8,United Kingdom,GB,Newry,54.1759,-6.3374,BT,Telecommunications
+198.0.0.0/8,United Kingdom,GB,Newtownabbey,54.6598,-5.9086,BT,Telecommunications
+199.0.0.0/8,United Kingdom,GB,Portadown,54.4231,-6.4493,BT,Telecommunications
+200.0.0.0/8,United Kingdom,GB,Antrim,54.7183,-6.2074,BT,Telecommunications
+201.0.0.0/8,United Kingdom,GB,Ballymena,54.8647,-6.2781,BT,Telecommunications
+202.0.0.0/8,United Kingdom,GB,Ballymoney,55.0708,-6.5101,BT,Telecommunications
+203.0.0.0/8,United Kingdom,GB,Carrickfergus,54.7136,-5.8074,BT,Telecommunications
+204.0.0.0/8,United Kingdom,GB,Coleraine,55.1333,-6.6667,BT,Telecommunications
+205.0.0.0/8,United Kingdom,GB,Cookstown,54.6472,-6.7453,BT,Telecommunications
+206.0.0.0/8,United Kingdom,GB,Craigavon,54.4472,-6.3881,BT,Telecommunications
+207.0.0.0/8,United Kingdom,GB,Derry,54.9966,-7.3086,BT,Telecommunications
+208.0.0.0/8,United Kingdom,GB,Dungannon,54.5033,-6.7667,BT,Telecommunications
+209.0.0.0/8,United Kingdom,GB,Enniskillen,54.3464,-7.6311,BT,Telecommunications
+210.0.0.0/8,United Kingdom,GB,Larne,54.8500,-5.8167,BT,Telecommunications
+211.0.0.0/8,United Kingdom,GB,Limavady,55.0500,-6.9500,BT,Telecommunications
+212.0.0.0/8,United Kingdom,GB,Lisburn,54.5162,-6.0581,BT,Telecommunications
+213.0.0.0/8,United Kingdom,GB,Londonderry,54.9966,-7.3086,BT,Telecommunications
+214.0.0.0/8,United Kingdom,GB,Magherafelt,54.7544,-6.6064,BT,Telecommunications
+215.0.0.0/8,United Kingdom,GB,Newcastle,54.2167,-5.8833,BT,Telecommunications
+216.0.0.0/8,United Kingdom,GB,Newry,54.1759,-6.3374,BT,Telecommunications
+217.0.0.0/8,United Kingdom,GB,Newtownabbey,54.6598,-5.9086,BT,Telecommunications
+218.0.0.0/8,United Kingdom,GB,North Down,54.6598,-5.6698,BT,Telecommunications
+219.0.0.0/8,United Kingdom,GB,Omagh,54.5977,-7.3100,BT,Telecommunications
+220.0.0.0/8,United Kingdom,GB,Strabane,54.8274,-7.4728,BT,Telecommunications
+221.0.0.0/8,United Kingdom,GB,Antrim,54.7183,-6.2074,BT,Telecommunications
+222.0.0.0/8,United Kingdom,GB,Ards,54.6598,-5.6698,BT,Telecommunications
+223.0.0.0/8,United Kingdom,GB,Armagh,54.3503,-6.6528,BT,Telecommunications
+224.0.0.0/8,United Kingdom,GB,Ballymena,54.8647,-6.2781,BT,Telecommunications
+225.0.0.0/8,United Kingdom,GB,Ballymoney,55.0708,-6.5101,BT,Telecommunications
+226.0.0.0/8,United Kingdom,GB,Banbridge,54.3503,-6.6528,BT,Telecommunications
+227.0.0.0/8,United Kingdom,GB,Belfast,54.5973,-5.9301,BT,Telecommunications
+228.0.0.0/8,United Kingdom,GB,Carrickfergus,54.7136,-5.8074,BT,Telecommunications
+229.0.0.0/8,United Kingdom,GB,Coleraine,55.1333,-6.6667,BT,Telecommunications
+230.0.0.0/8,United Kingdom,GB,Cookstown,54.6472,-6.7453,BT,Telecommunications
+231.0.0.0/8,United Kingdom,GB,Craigavon,54.4472,-6.3881,BT,Telecommunications
+232.0.0.0/8,United Kingdom,GB,Derry,54.9966,-7.3086,BT,Telecommunications
+233.0.0.0/8,United Kingdom,GB,Down,54.6598,-5.6698,BT,Telecommunications
+234.0.0.0/8,United Kingdom,GB,Dungannon,54.5033,-6.7667,BT,Telecommunications
+235.0.0.0/8,United Kingdom,GB,Fermanagh,54.3464,-7.6311,BT,Telecommunications
+236.0.0.0/8,United Kingdom,GB,Larne,54.8500,-5.8167,BT,Telecommunications
+237.0.0.0/8,United Kingdom,GB,Limavady,55.0500,-6.9500,BT,Telecommunications
+238.0.0.0/8,United Kingdom,GB,Lisburn,54.5162,-6.0581,BT,Telecommunications
+239.0.0.0/8,United Kingdom,GB,Londonderry,54.9966,-7.3086,BT,Telecommunications
+240.0.0.0/8,United Kingdom,GB,Magherafelt,54.7544,-6.6064,BT,Telecommunications
+241.0.0.0/8,United Kingdom,GB,Moyle,55.1333,-6.6667,BT,Telecommunications
+242.0.0.0/8,United Kingdom,GB,Newry,54.1759,-6.3374,BT,Telecommunications
+243.0.0.0/8,United Kingdom,GB,Newtownabbey,54.6598,-5.9086,BT,Telecommunications
+244.0.0.0/8,United Kingdom,GB,North Down,54.6598,-5.6698,BT,Telecommunications
+245.0.0.0/8,United Kingdom,GB,Omagh,54.5977,-7.3100,BT,Telecommunications
+246.0.0.0/8,United Kingdom,GB,Strabane,54.8274,-7.4728,BT,Telecommunications
+247.0.0.0/8,United Kingdom,GB,Tyrone,54.5977,-7.3100,BT,Telecommunications
+248.0.0.0/8,United Kingdom,GB,Antrim,54.7183,-6.2074,BT,Telecommunications
+249.0.0.0/8,United Kingdom,GB,Armagh,54.3503,-6.6528,BT,Telecommunications
+250.0.0.0/8,United Kingdom,GB,Belfast,54.5973,-5.9301,BT,Telecommunications
+251.0.0.0/8,United Kingdom,GB,Derry,54.9966,-7.3086,BT,Telecommunications
+252.0.0.0/8,United Kingdom,GB,Down,54.6598,-5.6698,BT,Telecommunications
+253.0.0.0/8,United Kingdom,GB,Fermanagh,54.3464,-7.6311,BT,Telecommunications
+254.0.0.0/8,United Kingdom,GB,Londonderry,54.9966,-7.3086,BT,Telecommunications
+255.0.0.0/8,United Kingdom,GB,Tyrone,54.5977,-7.3100,BT,Telecommunications 

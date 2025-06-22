@@ -1,0 +1,191 @@
+# 🛡️ Cybersecurity Home Lab - .gitignore
+
+# Sensitive Information
+*.key
+*.pem
+*.p12
+*.pfx
+*.crt
+*.cer
+*.der
+*.p7b
+*.p7c
+*.p8
+*.env
+.env.local
+.env.production
+.env.staging
+secrets.json
+credentials.json
+config.json
+*.log
+
+# Azure CLI
+.azure/
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+
+# PowerShell
+*.ps1.log
+*.ps1.error
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.yarn-integrity
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# OS Generated Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary Files
+*.tmp
+*.temp
+*.bak
+*.backup
+*.old
+
+# Log Files
+*.log
+logs/
+log/
+
+# Data Files (keep sample data but ignore large datasets)
+data/*.csv
+!data/geoip-sample.csv
+data/large-*.csv
+data/private-*.csv
+
+# Backup Files
+*.backup
+*.bak
+*.orig
+
+# Test Files
+test-results/
+coverage/
+.coverage
+.nyc_output
+
+# Documentation Build
+docs/_build/
+docs/.doctrees/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# R
+.Rhistory
+.RData
+.Ruserdata
+
+# MATLAB
+*.asv
+*.mat
+
+# Compiled Files
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Archives
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Virtual Environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Cloud Provider Files
+.aws/
+.gcloud/
+.azure/
+
+# Security Tools
+nmap-results/
+nessus-reports/
+openvas-reports/
+*.nse
+*.nmap
+
+# Lab Specific
+lab-configs/
+personal-notes/
+screenshots/
+videos/
+*.mp4
+*.avi
+*.mov
+
+# Keep important files
+!README.md
+!LICENSE
+!CONTRIBUTING.md
+!docs/setup-guide.md
+!docs/troubleshooting.md
+!docs/kql-queries.md
+!scripts/azure-setup.sh
+!queries/*.kql
+!workbooks/*.json
+!data/geoip-sample.csv 
