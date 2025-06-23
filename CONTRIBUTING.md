@@ -1,8 +1,8 @@
-# 🤝 Contributing to Cybersecurity Home Lab
+# Contributing to Azure Sentinel SOC Lab
 
-Thank you for your interest in contributing to the Cybersecurity Home Lab project! This document provides guidelines for contributing to this educational cybersecurity project.
+Thank you for your interest in contributing to the Azure Sentinel SOC Lab project. This document provides guidelines for contributing to this educational cybersecurity implementation.
 
-## 🎯 Project Goals
+## Project Goals
 
 This project aims to:
 - Provide hands-on cybersecurity learning experiences
@@ -10,9 +10,9 @@ This project aims to:
 - Create accessible, cost-effective security lab environments
 - Share knowledge with the cybersecurity community
 
-## 📋 How to Contribute
+## How to Contribute
 
-### 🐛 Reporting Issues
+### Reporting Issues
 
 Before creating an issue, please:
 1. Check the [troubleshooting guide](docs/troubleshooting.md)
@@ -41,7 +41,7 @@ Before creating an issue, please:
 [Paste any relevant logs]
 ```
 
-### 💡 Suggesting Enhancements
+### Suggesting Enhancements
 
 We welcome suggestions for:
 - New KQL queries
@@ -50,7 +50,7 @@ We welcome suggestions for:
 - Documentation improvements
 - Dashboard enhancements
 
-### 🔧 Code Contributions
+### Code Contributions
 
 #### Prerequisites
 - Basic knowledge of Azure services
@@ -85,10 +85,10 @@ We welcome suggestions for:
 - Use consistent formatting
 - Add safety checks
 
-## 📁 Project Structure
+## Project Structure
 
 ```
-cybersecurity-homelab/
+Azure_Sentinel_SOC_Lab/
 ├── docs/              # Documentation
 ├── scripts/           # Automation scripts
 ├── data/              # Sample data files
@@ -98,9 +98,9 @@ cybersecurity-homelab/
 └── README.md          # Main documentation
 ```
 
-## 🔒 Security Guidelines
+## Security Guidelines
 
-### ⚠️ Important Security Notes
+### Important Security Notes
 
 1. **Lab Environment Only**: This project creates intentionally vulnerable systems
 2. **Never Deploy in Production**: These configurations are for educational purposes only
@@ -115,7 +115,7 @@ cybersecurity-homelab/
 - Follow the principle of least privilege
 - Document security considerations
 
-## 🧪 Testing Guidelines
+## Testing Guidelines
 
 ### Before Submitting
 
@@ -134,7 +134,7 @@ cybersecurity-homelab/
 - [ ] Resources can be cleaned up easily
 - [ ] Cost estimates are reasonable
 
-## 📝 Pull Request Process
+## Pull Request Process
 
 ### Before Submitting a PR
 
@@ -179,7 +179,7 @@ cybersecurity-homelab/
 4. **Documentation**: Ensure documentation is updated
 5. **Merge**: Once approved, changes will be merged
 
-## 🏷️ Issue Labels
+## Issue Labels
 
 We use the following labels to categorize issues:
 
@@ -192,38 +192,43 @@ We use the following labels to categorize issues:
 - `security` - Security-related issues
 - `cost-optimization` - Cost-related improvements
 
-## 📚 Resources
+## Resources
 
 ### Learning Resources
 - [Microsoft Sentinel Documentation](https://docs.microsoft.com/en-us/azure/sentinel/)
 - [KQL Query Reference](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/)
 - [Azure Security Best Practices](https://docs.microsoft.com/en-us/azure/security/)
 
-### Community
-- [GitHub Discussions](https://github.com/yourusername/cybersecurity-homelab/discussions)
-- [Issues](https://github.com/yourusername/cybersecurity-homelab/issues)
-- [Wiki](https://github.com/yourusername/cybersecurity-homelab/wiki)
+### Development Tools
+- [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/)
+- [Azure PowerShell](https://docs.microsoft.com/en-us/powershell/azure/)
+- [KQL Playground](https://dataexplorer.azure.com/)
 
-## 🙏 Recognition
+## Code of Conduct
 
-Contributors will be recognized in:
-- Project README
-- Release notes
-- Contributor hall of fame
-- GitHub contributors page
+### Our Standards
 
-## 📞 Getting Help
+- Use welcoming and inclusive language
+- Be respectful of differing viewpoints
+- Gracefully accept constructive criticism
+- Focus on what is best for the community
+- Show empathy towards other community members
 
-If you need help contributing:
-1. Check the documentation
+### Enforcement
+
+Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the project team. All complaints will be reviewed and investigated and will result in a response that is deemed necessary and appropriate to the circumstances.
+
+## License
+
+By contributing to this project, you agree that your contributions will be licensed under the same license as the project (MIT License).
+
+## Contact
+
+If you have questions about contributing, please:
+1. Check the documentation first
 2. Search existing issues
-3. Ask in GitHub Discussions
-4. Contact maintainers
-
-## 🎉 Thank You!
-
-Thank you for contributing to the cybersecurity community! Your contributions help make cybersecurity education more accessible to everyone.
+3. Create a new issue with the `question` label
 
 ---
 
-**Remember**: This project is for educational purposes. Always follow your organization's security policies and local laws. 
+**Thank you for contributing to the Azure Sentinel SOC Lab project!** 

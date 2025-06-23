@@ -1,12 +1,12 @@
-# 🛡️ Cybersecurity Home Lab: Microsoft Sentinel & Honeypot
+# Azure Sentinel SOC Lab: Cybersecurity Home Lab Implementation
 
-A comprehensive guide to building a cybersecurity home lab using Microsoft Sentinel and a honeypot virtual machine to monitor and analyze real-world cyber attacks. **Enhanced for mid-size company environments.**
+A comprehensive implementation guide for building a cybersecurity home lab using Microsoft Sentinel and a honeypot virtual machine to monitor and analyze real-world cyber attacks. Designed for developers and security professionals with enterprise-grade features suitable for mid-size company environments.
 
-## 🎯 Project Overview
+## Project Overview
 
-This project demonstrates how to set up a complete Security Operations Center (SOC) lab environment that captures, analyzes, and visualizes real cyber attacks in real-time. Perfect for cybersecurity professionals, students, and **mid-size companies** looking to gain hands-on experience with enterprise-grade security tools.
+This project demonstrates how to set up a complete Security Operations Center (SOC) lab environment that captures, analyzes, and visualizes real cyber attacks in real-time. The implementation is designed for cybersecurity professionals, developers, and mid-size companies looking to gain hands-on experience with enterprise-grade security tools.
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 Azure Tenant
@@ -24,7 +24,7 @@ Azure Tenant
                 └── Threat Intelligence
 ```
 
-## 🚀 Features
+## Features
 
 - **Real-time Attack Monitoring**: Capture live cyber attacks from around the world
 - **Geolocation Analysis**: Map attack origins with detailed geographic data
@@ -35,19 +35,19 @@ Azure Tenant
 - **Enterprise Ready**: Includes compliance, automation, and threat intelligence
 - **Scalable Design**: Easy to expand for production environments
 
-## 📋 Prerequisites
+## Prerequisites
 
 - Azure free account (https://azure.microsoft.com/free)
 - Basic understanding of Azure services
 - Windows 10/11 for RDP connection
 - Internet connection
 
-## 🛠️ Quick Start
+## Quick Start
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/yourusername/cybersecurity-homelab.git
-cd cybersecurity-homelab
+git clone https://github.com/shayshab/Azure_Sentinel_SOC_Lab.git
+cd Azure_Sentinel_SOC_Lab
 ```
 
 ### 2. Follow the Setup Guide
@@ -59,10 +59,10 @@ cd cybersecurity-homelab
 ### 3. Deploy Infrastructure
 Use the provided Azure CLI scripts or follow the manual setup guide.
 
-## 📁 Project Structure
+## Project Structure
 
 ```
-cybersecurity-homelab/
+Azure_Sentinel_SOC_Lab/
 ├── docs/                          # Documentation
 │   ├── setup-guide.md            # Complete setup instructions
 │   ├── troubleshooting.md        # Common issues and solutions
@@ -99,7 +99,7 @@ cybersecurity-homelab/
 └── README.md                      # This file
 ```
 
-## 🔧 Setup Phases
+## Setup Phases
 
 ### Phase 1: Azure Infrastructure
 - Create Azure account and resource group
@@ -127,7 +127,7 @@ cybersecurity-homelab/
 - Create automation playbooks
 - Implement alert rules
 
-## 📊 What You'll Learn
+## What You'll Learn
 
 - **Azure Security Services**: Hands-on experience with Microsoft's security stack
 - **Threat Intelligence**: Real-world attack patterns and indicators
@@ -138,7 +138,7 @@ cybersecurity-homelab/
 - **Compliance Monitoring**: Meeting regulatory requirements
 - **Automation**: Streamlining security operations
 
-## 🎨 Sample Outputs
+## Sample Outputs
 
 ### Attack Map Dashboard
 ![Attack Map](docs/images/attack-map.png)
@@ -158,9 +158,9 @@ GDPR Compliance       | 92%   | 2024-01-15
 ISO 27001             | 88%   | 2024-01-15
 ```
 
-## 🔒 Security Considerations
+## Security Considerations
 
-⚠️ **Important**: This lab intentionally creates an open attack surface. Never deploy this configuration in production environments.
+**Important**: This lab intentionally creates an open attack surface. Never deploy this configuration in production environments.
 
 - Use only in isolated lab environments
 - Monitor costs regularly
@@ -168,7 +168,7 @@ ISO 27001             | 88%   | 2024-01-15
 - Never use real credentials or sensitive data
 - Follow enterprise security policies
 
-## 📈 Cost Management
+## Cost Management
 
 - **Estimated Monthly Cost**: $5-15 USD (lab environment)
 - **Enterprise Scaling**: $50-200 USD (production-ready)
@@ -176,7 +176,7 @@ ISO 27001             | 88%   | 2024-01-15
 - **Log Analytics**: 5GB free ingestion per month
 - **Sentinel**: Free for first 30 days
 
-## 🏢 Enterprise Features
+## Enterprise Features
 
 ### Compliance & Governance
 - **SOC 2 Type II** monitoring templates
@@ -206,7 +206,7 @@ ISO 27001             | 88%   | 2024-01-15
 - **Risk scoring** algorithms
 - **Advanced correlation** rules
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Please read our [Contributing Guidelines](CONTRIBUTING.md) before submitting pull requests.
 
@@ -217,7 +217,7 @@ Contributions are welcome! Please read our [Contributing Guidelines](CONTRIBUTIN
 4. Add tests if applicable
 5. Submit a pull request
 
-## 📚 Additional Resources
+## Additional Resources
 
 - [Microsoft Sentinel Documentation](https://docs.microsoft.com/en-us/azure/sentinel/)
 - [KQL Query Reference](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/)
@@ -225,21 +225,21 @@ Contributions are welcome! Please read our [Contributing Guidelines](CONTRIBUTIN
 - [Honeypot Security Research](https://www.honeynet.org/)
 - [Enterprise Security Frameworks](https://www.nist.gov/cyberframework)
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## ⚠️ Disclaimer
+## Disclaimer
 
 This project is for educational and research purposes only. The authors are not responsible for any misuse of this information. Always follow your organization's security policies and local laws.
 
-## 🆘 Support
+## Support
 
-- **Issues**: [GitHub Issues](https://github.com/yourusername/cybersecurity-homelab/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/yourusername/cybersecurity-homelab/discussions)
-- **Wiki**: [Project Wiki](https://github.com/yourusername/cybersecurity-homelab/wiki)
+- **Issues**: [GitHub Issues](https://github.com/shayshab/Azure_Sentinel_SOC_Lab/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/shayshab/Azure_Sentinel_SOC_Lab/discussions)
+- **Wiki**: [Project Wiki](https://github.com/shayshab/Azure_Sentinel_SOC_Lab/wiki)
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Microsoft Azure for providing the platform
 - The cybersecurity community for continuous research
@@ -247,6 +247,4 @@ This project is for educational and research purposes only. The authors are not 
 
 ---
 
-**⭐ If this project helped you, please give it a star!**
-
-**🔔 Don't forget to follow for updates on new features and security research.** # Azure_Sentinel_SOC_Lab
+**If this project helped you, please give it a star!**

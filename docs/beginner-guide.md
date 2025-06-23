@@ -1,246 +1,193 @@
-# 🚀 Beginner's Complete Guide: Azure Sentinel SOC Lab
+# Azure Sentinel SOC Lab: Implementation Notes
 
-## 📋 What You'll Learn
-This guide will teach you how to build a complete cybersecurity lab using Microsoft Azure Sentinel. You'll learn:
-- How to set up a virtual machine that attracts hackers (honeypot)
-- How to monitor and analyze cyber attacks in real-time
-- How to create security dashboards and reports
-- Basic cybersecurity concepts and tools
+## Project Overview
+Implementation notes for building a complete cybersecurity lab using Microsoft Azure Sentinel. This project demonstrates real-time attack monitoring, threat intelligence integration, and enterprise-grade security operations.
 
-## ⏱️ Time Required
-- **Total Time**: 4-6 hours (spread over 2-3 days)
-- **Phase 1**: 1-2 hours (Azure setup)
-- **Phase 2**: 1-2 hours (Honeypot setup)
-- **Phase 3**: 1-2 hours (Sentinel configuration)
-- **Phase 4**: 1 hour (Analysis and reporting)
+## Time Requirements
+- **Total Implementation Time**: 4-6 hours (spread over 2-3 days)
+- **Phase 1**: 1-2 hours (Azure infrastructure setup)
+- **Phase 2**: 1-2 hours (Honeypot deployment and configuration)
+- **Phase 3**: 1-2 hours (Sentinel configuration and data collection)
+- **Phase 4**: 1 hour (Analysis, visualization, and reporting)
 
-## 💰 Cost Estimate
+## Cost Analysis
 - **Azure Free Tier**: $0 for first 12 months
-- **After Free Tier**: ~$50-100/month (depending on usage)
-- **Total First Year**: $0 (if using free tier properly)
+- **Post Free Tier**: ~$50-100/month (depending on usage patterns)
+- **First Year Total**: $0 (with proper free tier utilization)
 
 ---
 
-# 🎯 PHASE 1: Azure Account Setup (Day 1)
+## Phase 1: Azure Infrastructure Setup
 
-## Step 1: Create Azure Account
-**Time**: 30 minutes
+### Step 1: Azure Account Creation
+**Duration**: 30 minutes
 
-### What You're Doing:
-Setting up a Microsoft Azure account to host your cybersecurity lab.
+**Objective**: Establish Azure tenant for lab environment
 
-### Detailed Steps:
+**Implementation Steps**:
 
-1. **Go to Azure Website**
-   - Open your web browser
-   - Go to: https://azure.microsoft.com/
-   - Click "Start free" or "Free account"
+1. **Portal Access**
+   - Navigate to https://azure.microsoft.com/
+   - Select "Start free" or "Free account"
 
-2. **Sign Up Process**
-   - Enter your email address
-   - Click "Next"
-   - Enter a password (make it strong!)
-   - Click "Create account"
+2. **Account Registration**
+   - Input email address
+   - Create strong password
+   - Complete identity verification via email
 
-3. **Verify Your Identity**
-   - Microsoft will send a verification code to your email
-   - Check your email and enter the code
-   - Click "Verify"
+3. **Payment Verification**
+   - Add credit card information (no charges during free period)
+   - Complete phone verification
+   - Accept terms of service
 
-4. **Add Payment Information**
-   - Don't worry! You won't be charged during the free period
-   - Enter your credit card information
-   - This is just for verification purposes
+**Expected Outcome**: Active Azure subscription with $200 credit for 30 days
 
-5. **Complete Profile**
-   - Enter your name and phone number
-   - Click "Next"
-
-6. **Verify Phone Number**
-   - Microsoft will send a text message with a code
-   - Enter the code and click "Verify"
-
-7. **Agree to Terms**
-   - Read the terms (or just check the box)
-   - Click "Sign up"
-
-### ✅ What You Should See:
-- A welcome message from Azure
-- Access to the Azure portal
-
-### 🚨 Important Notes:
-- Keep your login credentials safe
-- You'll need a credit card, but won't be charged during free tier
-- The free tier gives you $200 credit for 30 days
+**Notes**: Keep credentials secure. Free tier provides adequate resources for lab environment.
 
 ---
 
-## Step 2: Navigate Azure Portal
-**Time**: 15 minutes
+### Step 2: Azure Portal Navigation
+**Duration**: 15 minutes
 
-### What You're Doing:
-Learning how to use the Azure portal interface.
+**Objective**: Familiarize with Azure portal interface
 
-### Detailed Steps:
+**Implementation Steps**:
 
-1. **Access Azure Portal**
-   - Go to: https://portal.azure.com
-   - Sign in with your new account
+1. **Portal Access**
+   - Navigate to https://portal.azure.com
+   - Authenticate with new account
 
-2. **Explore the Dashboard**
-   - You'll see a dashboard with various tiles
-   - This is your main control center for Azure
+2. **Interface Exploration**
+   - Review dashboard layout
+   - Locate search functionality
+   - Verify subscription status
 
-3. **Find the Search Bar**
-   - At the top of the page, you'll see a search bar
-   - This is how you'll find and create resources
+3. **Resource Management**
+   - Access subscription details
+   - Review available services
 
-4. **Check Your Subscription**
-   - Click on "Subscriptions" in the left menu
-   - You should see "Free Trial" or similar
-
-### ✅ What You Should See:
-- Azure portal dashboard
-- Your subscription listed
-- Search functionality working
+**Expected Outcome**: Functional understanding of Azure portal navigation
 
 ---
 
-## Step 3: Create Resource Group
-**Time**: 10 minutes
+### Step 3: Resource Group Creation
+**Duration**: 10 minutes
 
-### What You're Doing:
-Creating a container to organize all your lab resources.
+**Objective**: Establish resource container for lab components
 
-### Detailed Steps:
+**Implementation Steps**:
 
-1. **Search for Resource Groups**
-   - In the search bar, type "Resource groups"
-   - Click on "Resource groups" from the results
+1. **Resource Group Search**
+   - Use portal search: "Resource groups"
+   - Select "Resource groups" service
 
-2. **Create New Resource Group**
-   - Click the "+ Create" button
-   - You'll see a form to fill out
-
-3. **Fill in the Details**
-   - **Subscription**: Leave as default
+2. **Group Configuration**
+   - Click "+ Create"
+   - **Subscription**: Default selection
    - **Resource group name**: `sentinel-soc-lab-rg`
-   - **Region**: Choose the closest to you (e.g., "East US" for US East Coast)
+   - **Region**: Select nearest geographic location
 
-4. **Create the Resource Group**
-   - Click "Review + create"
-   - Click "Create"
-   - Wait for it to complete (usually 1-2 minutes)
+3. **Deployment**
+   - Review configuration
+   - Execute creation
+   - Verify successful deployment
 
-### ✅ What You Should See:
-- A new resource group created
-- Status showing "Succeeded"
+**Expected Outcome**: Resource group ready for lab components
 
 ---
 
-# 🎯 PHASE 2: Create Virtual Machine (Honeypot) (Day 1-2)
+## Phase 2: Honeypot Virtual Machine Deployment
 
-## Step 4: Create Virtual Machine
-**Time**: 45 minutes
+### Step 4: VM Creation
+**Duration**: 45 minutes
 
-### What You're Doing:
-Creating a virtual computer that will act as a honeypot (a system designed to attract hackers).
+**Objective**: Deploy honeypot virtual machine
 
-### Detailed Steps:
+**Implementation Steps**:
 
-1. **Search for Virtual Machines**
-   - In the search bar, type "Virtual machines"
-   - Click on "Virtual machines"
+1. **VM Service Access**
+   - Search: "Virtual machines"
+   - Select "Virtual machines" service
 
-2. **Create New VM**
-   - Click the "+ Create" button
-   - Select "Virtual machine"
+2. **VM Configuration**
+   - Click "+ Create" → "Virtual machine"
+   - **Subscription**: Default
+   - **Resource group**: `sentinel-soc-lab-rg`
+   - **VM name**: `honeypot-vm`
+   - **Region**: Match resource group
+   - **Availability**: "No infrastructure redundancy required"
+   - **Image**: Ubuntu Server 20.04 LTS
+   - **Size**: B1s (1 vCPU, 1 GiB memory)
 
-3. **Fill in Basic Information**
-   - **Subscription**: Leave as default
-   - **Resource group**: Select `sentinel-soc-lab-rg` (the one you created)
-   - **Virtual machine name**: `honeypot-vm`
-   - **Region**: Same as your resource group
-   - **Availability options**: "No infrastructure redundancy required"
-   - **Image**: Click "See all images" → Search for "Ubuntu" → Select "Ubuntu Server 20.04 LTS"
-   - **Size**: Click "See all sizes" → Search for "B1s" → Select "B1s" (1 vcpu, 1 GiB memory)
-
-4. **Set Up Administrator Account**
-   - **Authentication type**: "Password"
+3. **Authentication Setup**
+   - **Type**: Password
    - **Username**: `azureuser`
-   - **Password**: Create a strong password (write it down!)
-   - **Confirm password**: Enter the same password
+   - **Password**: Generate strong password
+   - **Confirm password**: Match
 
-5. **Configure Networking**
+4. **Network Configuration**
    - **Public inbound ports**: "Allow selected ports"
-   - **Select inbound ports**: Check "SSH (22)" and "HTTP (80)"
-   - **Public IP**: "Create new"
+   - **Selected ports**: SSH (22), HTTP (80)
+   - **Public IP**: Create new
    - **Public IP name**: `honeypot-vm-ip`
 
-6. **Review and Create**
-   - Click "Review + create"
-   - Review the summary
-   - Click "Create"
-   - Wait for deployment (5-10 minutes)
+5. **Deployment**
+   - Review configuration
+   - Execute deployment
+   - Monitor completion
 
-### ✅ What You Should See:
-- Deployment status showing "Succeeded"
-- A new virtual machine in your resource group
+**Expected Outcome**: Deployed VM with public IP address
 
-### 🚨 Important Notes:
-- Save your username and password!
-- The VM will have a public IP address (this is intentional for the honeypot)
+**Security Note**: Public IP is intentional for honeypot functionality
 
 ---
 
-## Step 5: Configure VM Security (Make it a Honeypot)
-**Time**: 30 minutes
+### Step 5: Honeypot Configuration
+**Duration**: 30 minutes
 
-### What You're Doing:
-Making your VM attractive to hackers by opening ports and installing vulnerable services.
+**Objective**: Configure VM as attack target
 
-### Detailed Steps:
+**Implementation Steps**:
 
-1. **Connect to Your VM**
-   - Go to your VM in Azure portal
-   - Click "Connect" → "SSH"
-   - Copy the SSH command shown
+1. **SSH Connection**
+   - Access VM in portal
+   - Navigate to "Connect" → "SSH"
+   - Copy connection command
 
-2. **Open Terminal/Command Prompt**
-   - On Windows: Press Win+R, type "cmd", press Enter
-   - On Mac: Open Terminal app
-   - On Linux: Open terminal
+2. **Terminal Access**
+   - Windows: Win+R → "cmd"
+   - macOS: Terminal application
+   - Linux: Terminal
 
-3. **SSH into Your VM**
-   - Paste the SSH command you copied
-   - Press Enter
-   - Enter your password when prompted
+3. **VM Access**
+   - Execute SSH command
+   - Authenticate with credentials
 
-4. **Install Vulnerable Services**
+4. **Service Installation**
    ```bash
-   # Update the system
+   # System update
    sudo apt update
    
-   # Install Apache web server
+   # Apache web server installation
    sudo apt install apache2 -y
    
-   # Install SSH server (if not already installed)
+   # SSH server verification
    sudo apt install openssh-server -y
    
-   # Start and enable services
+   # Service activation
    sudo systemctl start apache2
    sudo systemctl enable apache2
    sudo systemctl start ssh
    sudo systemctl enable ssh
    ```
 
-5. **Create a Fake Website**
+5. **Web Content Creation**
    ```bash
-   # Create a simple website
+   # Create honeypot website
    sudo nano /var/www/html/index.html
    ```
    
-   Add this content:
+   **Content**:
    ```html
    <html>
    <head><title>Company Internal Portal</title></head>
@@ -256,206 +203,185 @@ Making your VM attractive to hackers by opening ports and installing vulnerable 
    </html>
    ```
    
-   Save and exit: Press Ctrl+X, then Y, then Enter
+   **Save**: Ctrl+X, Y, Enter
 
-6. **Exit SSH**
+6. **Session Termination**
    ```bash
    exit
    ```
 
-### ✅ What You Should See:
-- Apache web server running
-- A fake company website accessible via HTTP
-- SSH access working
+**Expected Outcome**: Functional honeypot with web interface
 
 ---
 
-# 🎯 PHASE 3: Set Up Microsoft Sentinel (Day 2)
+## Phase 3: Microsoft Sentinel Configuration
 
-## Step 6: Create Log Analytics Workspace
-**Time**: 20 minutes
+### Step 6: Log Analytics Workspace
+**Duration**: 20 minutes
 
-### What You're Doing:
-Creating a workspace to collect and analyze security logs.
+**Objective**: Create log collection workspace
 
-### Detailed Steps:
+**Implementation Steps**:
 
-1. **Search for Log Analytics Workspace**
-   - In Azure search bar, type "Log Analytics workspaces"
-   - Click on "Log Analytics workspaces"
+1. **Workspace Service**
+   - Search: "Log Analytics workspaces"
+   - Select service
 
-2. **Create New Workspace**
+2. **Workspace Creation**
    - Click "+ Create"
-   - Fill in the details:
-     - **Subscription**: Leave as default
-     - **Resource group**: Select `sentinel-soc-lab-rg`
-     - **Name**: `sentinel-workspace`
-     - **Region**: Same as your resource group
+   - **Subscription**: Default
+   - **Resource group**: `sentinel-soc-lab-rg`
+   - **Name**: `sentinel-workspace`
+   - **Region**: Match resource group
 
-3. **Create the Workspace**
-   - Click "Review + create"
-   - Click "Create"
-   - Wait for completion (2-3 minutes)
+3. **Deployment**
+   - Review configuration
+   - Execute creation
+   - Verify completion
 
-### ✅ What You Should See:
-- A new Log Analytics workspace created
-- Status showing "Succeeded"
+**Expected Outcome**: Log Analytics workspace ready for Sentinel
 
 ---
 
-## Step 7: Deploy Microsoft Sentinel
-**Time**: 15 minutes
+### Step 7: Sentinel Deployment
+**Duration**: 15 minutes
 
-### What You're Doing:
-Installing Microsoft Sentinel, which is your security monitoring system.
+**Objective**: Enable Microsoft Sentinel
 
-### Detailed Steps:
+**Implementation Steps**:
 
-1. **Search for Microsoft Sentinel**
-   - In Azure search bar, type "Microsoft Sentinel"
-   - Click on "Microsoft Sentinel"
+1. **Sentinel Service**
+   - Search: "Microsoft Sentinel"
+   - Select service
 
-2. **Add Sentinel to Workspace**
+2. **Sentinel Addition**
    - Click "+ Add"
-   - Select your workspace: `sentinel-workspace`
+   - Select workspace: `sentinel-workspace`
    - Click "Add Microsoft Sentinel"
 
-3. **Wait for Deployment**
-   - This takes 5-10 minutes
-   - You'll see a notification when it's done
+3. **Deployment Monitoring**
+   - Wait for completion (5-10 minutes)
+   - Verify successful deployment
 
-### ✅ What You Should See:
-- Microsoft Sentinel added to your workspace
-- Access to Sentinel dashboard
+**Expected Outcome**: Active Microsoft Sentinel instance
 
 ---
 
-## Step 8: Connect VM to Sentinel
-**Time**: 20 minutes
+### Step 8: Data Source Connection
+**Duration**: 20 minutes
 
-### What You're Doing:
-Making your honeypot VM send security logs to Sentinel.
+**Objective**: Connect honeypot to Sentinel
 
-### Detailed Steps:
+**Implementation Steps**:
 
-1. **Go to Microsoft Sentinel**
-   - In Azure portal, search for "Microsoft Sentinel"
-   - Click on your Sentinel workspace
+1. **Sentinel Access**
+   - Navigate to Microsoft Sentinel
+   - Access workspace
 
-2. **Add Data Connector**
-   - In the left menu, click "Data connectors"
+2. **Data Connector Configuration**
+   - Navigate to "Data connectors"
    - Search for "Linux"
-   - Click on "Linux" → "Open connector page"
+   - Select "Linux" → "Open connector page"
 
-3. **Configure Linux Agent**
+3. **Agent Installation**
    - Click "Install agents"
-   - Select your VM: `honeypot-vm`
+   - Select VM: `honeypot-vm`
    - Click "Add"
 
-4. **Install Agent on VM**
-   - Go back to your VM
-   - Click "Connect" → "SSH"
-   - Copy the installation command
-   - SSH into your VM and run the command
+4. **VM Agent Installation**
+   - Return to VM
+   - Access "Connect" → "SSH"
+   - Copy installation command
+   - Execute in SSH session
 
-5. **Verify Connection**
-   - Go back to Sentinel
+5. **Connection Verification**
+   - Return to Sentinel
    - Check "Data connectors" → "Linux"
-   - Status should show "Connected"
+   - Verify "Connected" status
 
-### ✅ What You Should See:
-- Linux agent installed on your VM
-- Data connector showing "Connected" status
+**Expected Outcome**: Honeypot sending logs to Sentinel
 
 ---
 
-# 🎯 PHASE 4: Monitor and Analyze Attacks (Day 2-3)
+## Phase 4: Attack Monitoring and Analysis
 
-## Step 9: Generate Attack Traffic
-**Time**: 30 minutes
+### Step 9: Attack Traffic Generation
+**Duration**: 30 minutes
 
-### What You're Doing:
-Creating fake attack traffic to test your monitoring system.
+**Objective**: Generate test attack traffic
 
-### Detailed Steps:
+**Implementation Steps**:
 
-1. **Find Your VM's Public IP**
-   - Go to your VM in Azure portal
-   - Copy the "Public IP address"
+1. **IP Address Identification**
+   - Access VM in portal
+   - Copy "Public IP address"
 
-2. **Use Online Port Scanner**
-   - Go to: https://www.yougetsignal.com/tools/open-ports/
-   - Enter your VM's IP address
+2. **Port Scanning**
+   - Navigate to https://www.yougetsignal.com/tools/open-ports/
+   - Input VM IP address
    - Scan ports 22 (SSH) and 80 (HTTP)
 
-3. **Try to Access Your Website**
-   - Open a new browser tab
-   - Go to: `http://YOUR_VM_IP_ADDRESS`
-   - You should see your fake company website
+3. **Web Access Testing**
+   - Open browser
+   - Navigate to `http://<VM_IP_ADDRESS>`
+   - Verify website accessibility
 
-4. **Simulate Login Attempts**
-   - Try entering fake usernames and passwords
-   - This will generate failed login events
+4. **Authentication Testing**
+   - Attempt login with invalid credentials
+   - Generate failed authentication events
 
-### ✅ What You Should See:
-- Your fake website accessible from the internet
-- Port scan results showing open ports
+**Expected Outcome**: Attack traffic for analysis
 
 ---
 
-## Step 10: View Security Incidents
-**Time**: 20 minutes
+### Step 10: Security Incident Review
+**Duration**: 20 minutes
 
-### What You're Doing:
-Checking if Sentinel detected the attack activities.
+**Objective**: Analyze detected security events
 
-### Detailed Steps:
+**Implementation Steps**:
 
-1. **Go to Microsoft Sentinel**
-   - In Azure portal, open Microsoft Sentinel
+1. **Sentinel Access**
+   - Navigate to Microsoft Sentinel
 
-2. **Check Incidents**
-   - In the left menu, click "Incidents"
-   - Look for any security incidents
-   - Click on any incidents to see details
+2. **Incident Review**
+   - Access "Incidents"
+   - Review any detected security incidents
+   - Examine incident details
 
-3. **Check Logs**
-   - In the left menu, click "Logs"
-   - This opens the query interface
+3. **Log Analysis**
+   - Navigate to "Logs"
+   - Access query interface
 
-4. **Run Basic Queries**
-   - Try this query to see failed logins:
+4. **Basic Query Execution**
    ```kql
    Syslog
    | where Facility == "auth" and SeverityLevel == "Error"
    | summarize count() by Computer, TimeGenerated
    ```
 
-### ✅ What You Should See:
-- Security incidents (if any attacks were detected)
-- Log data from your VM
-- Query results showing activity
+**Expected Outcome**: Security event visibility and analysis
 
 ---
 
-## Step 11: Create Security Dashboard
-**Time**: 30 minutes
+### Step 11: Dashboard Creation
+**Duration**: 30 minutes
 
-### What You're Doing:
-Creating a visual dashboard to monitor your security environment.
+**Objective**: Create security monitoring dashboard
 
-### Detailed Steps:
+**Implementation Steps**:
 
-1. **Go to Workbooks**
-   - In Sentinel, click "Workbooks" in the left menu
-
-2. **Create New Workbook**
+1. **Workbook Access**
+   - Navigate to "Workbooks"
    - Click "+ Add workbook"
-   - Click "Edit" to customize
 
-3. **Add Security Metrics**
+2. **Dashboard Configuration**
+   - Click "Edit"
+   - Add security metrics
+
+3. **Query Integration**
    - Click "+ Add" → "Add query"
-   - Add this query for failed logins:
+   - **Query for failed logins**:
    ```kql
    Syslog
    | where Facility == "auth" and SeverityLevel == "Error"
@@ -463,33 +389,28 @@ Creating a visual dashboard to monitor your security environment.
    | render timechart
    ```
 
-4. **Save Your Dashboard**
+4. **Dashboard Persistence**
    - Click "Save"
-   - Name it "Honeypot Security Dashboard"
-   - Click "Save"
+   - **Name**: "Honeypot Security Dashboard"
+   - Execute save
 
-### ✅ What You Should See:
-- A visual dashboard with security metrics
-- Charts showing failed login attempts
-- Real-time monitoring capabilities
+**Expected Outcome**: Functional security monitoring dashboard
 
 ---
 
-# 🎯 PHASE 5: Advanced Analysis (Day 3)
+## Phase 5: Advanced Analysis Implementation
 
-## Step 12: Use Pre-built KQL Queries
-**Time**: 30 minutes
+### Step 12: KQL Query Implementation
+**Duration**: 30 minutes
 
-### What You're Doing:
-Using advanced queries to analyze security data.
+**Objective**: Execute advanced security queries
 
-### Detailed Steps:
+**Implementation Steps**:
 
-1. **Open Logs in Sentinel**
-   - Go to Sentinel → "Logs"
+1. **Query Interface Access**
+   - Navigate to Sentinel → "Logs"
 
-2. **Try Attack Geography Query**
-   - Copy and paste this query:
+2. **Attack Geography Analysis**
    ```kql
    Syslog
    | where Facility == "auth" and SeverityLevel == "Error"
@@ -499,8 +420,7 @@ Using advanced queries to analyze security data.
    | order by AttackCount desc
    ```
 
-3. **Try Failed Logins Query**
-   - Copy and paste this query:
+3. **Failed Authentication Analysis**
    ```kql
    Syslog
    | where Facility == "auth" and SeverityLevel == "Error"
@@ -510,34 +430,30 @@ Using advanced queries to analyze security data.
    | order by FailedAttempts desc
    ```
 
-### ✅ What You Should See:
-- Lists of IP addresses attempting attacks
-- Usernames with failed login attempts
-- Attack patterns and trends
+**Expected Outcome**: Advanced threat analysis capabilities
 
 ---
 
-## Step 13: Create Alerts
-**Time**: 20 minutes
+### Step 13: Alert Rule Configuration
+**Duration**: 20 minutes
 
-### What You're Doing:
-Setting up automatic alerts for suspicious activities.
+**Objective**: Implement automated security alerting
 
-### Detailed Steps:
+**Implementation Steps**:
 
-1. **Go to Analytics**
-   - In Sentinel, click "Analytics" in the left menu
+1. **Analytics Access**
+   - Navigate to "Analytics"
 
-2. **Create New Rule**
+2. **Rule Creation**
    - Click "+ Create" → "Scheduled query rule"
 
-3. **Configure Alert**
+3. **Alert Configuration**
    - **Name**: "Multiple Failed Logins Alert"
    - **Description**: "Alert when multiple failed logins detected"
-   - **Tactics**: Select "Credential Access"
+   - **Tactics**: "Credential Access"
    - **Severity**: "Medium"
 
-4. **Set Query**
+4. **Query Definition**
    ```kql
    Syslog
    | where Facility == "auth" and SeverityLevel == "Error"
@@ -545,128 +461,117 @@ Setting up automatic alerts for suspicious activities.
    | where FailedLogins > 5
    ```
 
-5. **Set Schedule**
+5. **Schedule Configuration**
    - **Query scheduling**: Every 5 minutes
    - **Alert threshold**: Greater than 0
 
-6. **Create the Alert**
-   - Click "Review and create"
-   - Click "Create"
+6. **Rule Deployment**
+   - Review configuration
+   - Execute creation
 
-### ✅ What You Should See:
-- A new alert rule created
-- Automatic monitoring of failed logins
+**Expected Outcome**: Automated security alerting system
 
 ---
 
-# 🎯 PHASE 6: Clean Up and Documentation (Day 3)
+## Phase 6: Documentation and Cleanup
 
-## Step 14: Document Your Findings
-**Time**: 30 minutes
+### Step 14: Implementation Documentation
+**Duration**: 30 minutes
 
-### What You're Doing:
-Creating a report of what you learned and discovered.
+**Objective**: Document lab implementation and findings
 
-### Detailed Steps:
+**Implementation Steps**:
 
-1. **Create a Report Document**
-   - Open a text editor or Google Docs
-   - Create a new document
+1. **Document Creation**
+   - Open text editor or document application
+   - Create new document
 
-2. **Document Your Setup**
-   - List all resources you created
-   - Note IP addresses and usernames
-   - Document any issues you encountered
+2. **Implementation Documentation**
+   - List deployed resources
+   - Document IP addresses and credentials
+   - Record implementation issues
 
-3. **Record Attack Data**
-   - Copy any interesting query results
-   - Screenshot your dashboards
-   - Note any security incidents
+3. **Analysis Documentation**
+   - Copy query results
+   - Screenshot dashboards
+   - Document security incidents
 
-4. **Save Your Documentation**
-   - Save the file as "SOC_Lab_Report.docx" or similar
+4. **Document Persistence**
+   - Save as "SOC_Lab_Implementation_Report.docx"
 
-### ✅ What You Should See:
-- A complete report of your lab setup
-- Documentation of any attacks detected
-- Screenshots of your dashboards
+**Expected Outcome**: Complete implementation documentation
 
 ---
 
-## Step 15: Clean Up Resources (Optional)
-**Time**: 15 minutes
+### Step 15: Resource Cleanup (Optional)
+**Duration**: 15 minutes
 
-### What You're Doing:
-Removing Azure resources to avoid charges (only if you want to stop using the lab).
+**Objective**: Remove Azure resources to prevent charges
 
-### Detailed Steps:
+**Implementation Steps**:
 
-1. **Delete Resource Group**
-   - Go to "Resource groups" in Azure portal
-   - Click on `sentinel-soc-lab-rg`
+1. **Resource Group Deletion**
+   - Navigate to "Resource groups"
+   - Select `sentinel-soc-lab-rg`
    - Click "Delete resource group"
-   - Type the resource group name to confirm
-   - Click "Delete"
+   - Confirm deletion
 
-2. **Wait for Deletion**
-   - This takes 5-10 minutes
-   - All resources will be removed
+2. **Deletion Monitoring**
+   - Wait for completion (5-10 minutes)
+   - Verify resource removal
 
-### ⚠️ Important:
-- Only do this if you want to stop using the lab
-- This will delete everything you created
-- You can always recreate it later
+**Important**: Only execute if lab environment is no longer needed
 
 ---
 
-# 🎉 Congratulations!
+## Implementation Summary
 
-## What You've Accomplished:
-✅ Created a complete cybersecurity lab in Azure  
-✅ Set up a honeypot virtual machine  
-✅ Deployed Microsoft Sentinel for monitoring  
-✅ Generated and analyzed attack traffic  
-✅ Created security dashboards and alerts  
-✅ Learned basic cybersecurity concepts  
+### Accomplished Objectives
+- Complete Azure Sentinel SOC lab deployment
+- Honeypot virtual machine configuration
+- Real-time attack monitoring implementation
+- Security dashboard creation
+- Automated alerting system
+- Advanced threat analysis capabilities
 
-## Next Steps:
-1. **Keep Learning**: Try different types of attacks
-2. **Expand**: Add more VMs or services
-3. **Practice**: Use the KQL queries in the `queries/` folder
-4. **Share**: Show your lab to others interested in cybersecurity
+### Next Steps
+1. **Advanced Implementation**: Deploy additional VMs and services
+2. **Query Development**: Create custom KQL queries
+3. **Integration**: Connect with external threat feeds
+4. **Automation**: Implement advanced playbooks
 
-## Resources for Further Learning:
+### Learning Resources
 - Microsoft Learn: Azure Security courses
-- YouTube: Azure Sentinel tutorials
-- Books: "Blue Team Handbook" by Don Murdoch
-- Online: TryHackMe, HackTheBox for hands-on practice
+- Azure Sentinel documentation
+- KQL query reference
+- Enterprise security frameworks
 
 ---
 
-# 🆘 Troubleshooting
+## Troubleshooting Reference
 
-## Common Issues and Solutions:
+### Common Implementation Issues
 
-### "I can't connect to my VM"
-- Check if the VM is running
-- Verify your username and password
-- Make sure SSH port (22) is open
+**VM Connection Failures**
+- Verify VM running status
+- Confirm credential accuracy
+- Check SSH port accessibility
 
-### "No data in Sentinel"
-- Verify the Linux agent is installed
+**Sentinel Data Issues**
+- Verify Linux agent installation
 - Check data connector status
-- Wait 5-10 minutes for data to appear
+- Allow 5-10 minutes for data propagation
 
-### "I'm getting charged"
-- Check your Azure billing
-- Make sure you're using free tier resources
-- Delete resources when not in use
+**Billing Concerns**
+- Monitor Azure billing dashboard
+- Verify free tier resource usage
+- Delete unused resources
 
-### "Queries aren't working"
-- Check the syntax carefully
-- Make sure you're in the right workspace
-- Try simpler queries first
+**Query Execution Errors**
+- Verify KQL syntax
+- Confirm workspace selection
+- Test with simplified queries
 
 ---
 
-**Remember**: This is a learning lab. Take your time, experiment, and don't worry about making mistakes. Every cybersecurity professional started as a beginner! 
+**Implementation Notes**: This lab environment is designed for educational and research purposes. The open attack surface is intentional for honeypot functionality. Always follow organizational security policies and local regulations. 
